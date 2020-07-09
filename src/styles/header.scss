@@ -41,10 +41,11 @@
   text-decoration: none;
   cursor: pointer;
   line-height: 60px;
-}
+  transition: color 1s;
 
-.nav__link:hover {
-  color: $primary-color;
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 .is-active {

@@ -4,7 +4,7 @@
   width: 200px;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
-  padding: 30px 14px 15px;
+  padding: 15px 14px;
   margin-bottom: 50px;
   border-radius: 5px;
   display: flex;
@@ -12,9 +12,16 @@
 }
 
 .card__image {
+  padding-top: 15px;
+  display: block;
   width: 160px;
   height: 134px;
   margin: 0 5px 45px;
+  transition: transform 1s;
+  &:hover {
+    transform: scale(1.2);
+    outline: 3px solid #f3f3f3;
+  }
 }
 
 .card__product-name {
@@ -87,9 +94,10 @@
   border-radius: 5px;
   box-sizing: border-box;
   border: 1px solid $primary-color;
-}
+  transition: color, background, 1s;
 
-.card__button:hover {
-  color: $primary-color;
-  background: #fff;
+  &:hover {
+    color: $primary-color;
+    background: #fff;
+  }
 }
