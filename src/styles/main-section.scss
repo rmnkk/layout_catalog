@@ -1,12 +1,10 @@
-@import "global";
-
 .main {
   margin-top: 50px;
   @include centered;
 }
 
-.card__layout {
-  width: 944px;
-  @include space-between;
+.catalog {
+  width: #{$card-width * 4 + $card-horizontal-margin * 2 * 4};
+  display: flex;
   flex-wrap: wrap;
 }

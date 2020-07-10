@@ -1,103 +1,103 @@
-@import "global";
+.catalog__card {
+  margin: 0 $card-horizontal-margin 50px;
+}
 
 .card {
-  width: 200px;
+  width: $card-width;
   border: 1px solid #f3f3f3;
   box-sizing: border-box;
   padding: 15px 14px;
-  margin-bottom: 50px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-}
 
-.card__image {
-  padding-top: 15px;
-  display: block;
-  width: 160px;
-  height: 134px;
-  margin: 0 5px 45px;
-  transition: transform 1s;
-  &:hover {
-    transform: scale(1.2);
-    outline: 3px solid #f3f3f3;
+  &__image {
+    padding-top: 15px;
+    width: 160px;
+    height: 134px;
+    align-self: center;
+    margin-bottom: 45px;
+    transition: transform linear 1s;
+
+    &:hover {
+      transform: scale(1.2);
+      outline: 3px solid #f3f3f3;
+    }
   }
-}
 
-.card__product-name {
-  font-weight: 500;
-  font-size: $font-normal;
-  line-height: 15px;
-  margin: 0 0 5px;
-}
+  &__product-name {
+    font-weight: 500;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
 
-.card__product-code {
-  font-size: $font-small;
-  line-height: 13px;
-  margin-bottom: 15px;
-}
+  &__product-code {
+    font-size: $font-small;
+    line-height: 13px;
+    margin-bottom: 15px;
+  }
 
-.card__rating {
-  @include space-between;
-  margin-bottom: 20px;
-  font-size: $font-small;
+  &__rating {
+    @include space-between;
+    margin-bottom: 20px;
+    font-size: $font-small;
+  }
+
+  &__score {
+    align-self: center;
+  }
+
+  &__price-tag {
+    @include space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+
+  &__price-text {
+    font-size: $font-small;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: $font-big;
+  }
+
+  &__button {
+    @include centered;
+    height: 40px;
+    font-weight: 700;
+    font-size: $font-middle;
+    text-transform: uppercase;
+    background: $primary-color;
+    color: $button-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid $primary-color;
+    transition: color, background, linear 1s;
+  }
+
+  &__button:hover {
+    color: $primary-color;
+    background: $button-color;
+  }
+
 }
 
 .stars {
   display: flex;
-}
 
-.stars__item {
-  width: 15px;
-  height: 15px;
-  margin-right: 4px;
-  background-image: url("../images/star.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  &__item {
+    width: $star-size;
+    height: $star-size;
+    margin-right: 4px;
+    background-image: url("../images/star.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 @for $i from 1 through 5 {
   .stars--#{$i} .stars__item:nth-child(-n+#{$i}) {
     background-image: url("../images/star-active.svg");
-  }
-}
-
-.card__score {
-  align-self: center;
-}
-
-.card__price-tag {
-  @include space-between;
-  align-items: baseline;
-  margin-bottom: 20px;
-}
-
-.card__price-text {
-  font-size: $font-small;
-}
-
-.card__value {
-  font-weight: 700;
-  font-size: $font-big;
-}
-
-.card__button {
-  @include centered;
-  width: 170px;
-  height: 40px;
-  font-weight: 700;
-  font-size: $font-middle;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: $primary-color;
-  color: #fff;
-  border-radius: 5px;
-  box-sizing: border-box;
-  border: 1px solid $primary-color;
-  transition: color, background, 1s;
-
-  &:hover {
-    color: $primary-color;
-    background: #fff;
   }
 }
