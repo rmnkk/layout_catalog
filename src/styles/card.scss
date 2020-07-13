@@ -17,6 +17,12 @@
     height: 134px;
     align-self: center;
     margin-bottom: 45px;
+    transition: transform linear $transition-time;
+
+    &:hover {
+      transform: scale(1.2);
+      outline: 3px solid #f3f3f3;
+    }
   }
 
   &__product-name {
@@ -67,6 +73,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     border: 1px solid $primary-color;
+    transition: color, background, linear $transition-time;
   }
 
   &__button:hover {

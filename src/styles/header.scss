@@ -36,6 +36,7 @@
     color: $link-color;
     cursor: pointer;
     height: $link-height;
+    transition: color linear $transition-time;
   }
 
   &__link:hover {
