@@ -17,6 +17,7 @@
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
   &__item {
@@ -36,6 +37,8 @@
     color: $link-color;
     cursor: pointer;
     height: $link-height;
+    transition: color linear $transition-time;
+    text-decoration: none;
   }
 
   &__link:hover {

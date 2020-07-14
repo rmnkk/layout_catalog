@@ -1,24 +1,32 @@
 .card {
   width: $card-width;
   border: 1px solid #f3f3f3;
-  box-sizing: border-box;
   padding: 15px 14px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
 
   &__image {
+    box-sizing: content-box;
     padding-top: 15px;
     width: 160px;
     height: 134px;
     align-self: center;
     margin-bottom: 45px;
+    transition: transform linear $transition-time;
+
+    &:hover {
+      transform: scale(1.2);
+      outline: 3px solid #f3f3f3;
+    }
   }
 
   &__product-name {
     font-weight: 500;
+    font-size: $font-normal;
     line-height: 15px;
-    margin-bottom: 5px;
+    margin: 0 0 5px;
+    padding: 0;
   }
 
   &__product-code {
@@ -52,7 +60,7 @@
     font-size: $font-big;
   }
 
-  &__button {
+  &__buy-link {
     @include centered;
     height: 40px;
     font-weight: 700;
@@ -61,13 +69,14 @@
     background: $primary-color;
     color: $button-color;
     border-radius: 5px;
-    box-sizing: border-box;
     border: 1px solid $primary-color;
+    transition: color, background-color, linear $transition-time;
+    text-decoration: none;
   }
 
-  &__button:hover {
+  &__buy-link:hover {
     color: $primary-color;
-    background: $button-color;
+    background-color: $button-color;
   }
 
 }
