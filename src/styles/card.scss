@@ -74,13 +74,13 @@
     color: $button-color;
     border-radius: 5px;
     border: 1px solid $primary-color;
-    transition: color, background, linear $transition-time;
+    transition: color, background-color, linear $transition-time;
     text-decoration: none;
   }
 
   &__buy-link:hover {
     color: $primary-color;
-    background: $button-color;
+    background-color: $button-color;
   }
 
 }
